@@ -1,1 +1,15 @@
 Answers:
+DNS, Domain name system, it translates domain names into IP addresses to be able to use internet resources, it eliminate the need for humans to memorize IP addresses
+HTTP, hypertext transfer protocol, it's the protocol that enables communication on the web,it works as a request-response btween a client and server.
+HTTP proxy, it's an intermediary btween a client and the internet, it serve various purposes such as improving performance by cashing,anonymizing the client or bypassing restrictions to certain web content.
+HTTPS, hypertext transfer protocol secure, it is an extension of HTTP that add a layer of security to the data transfer process.
+SMTP, simple mail transfer protocol, it's the standard protocol to send emails across the internet
+in Linux, the file system is hierarchical structure, at the top is root directory denoted by / and underneath it several subdirectories like:
+/bin: contains binary executables the are essential for the system to run
+/etc: holds system configuration files
+/home: home directories of all users
+/var: variable data like system logging files,mail and printer spool directories, transient and temporary files.
+/usr: read-only user data, contains the majority of multi user utilities and application
+/dev: device files,special files that correspond to the hardware device such as(keyboard,mouse ...)
+/sbin: holds adminstrative binaries and tools
+/lib: library files that contains code that myltiple programs can us simyltaneously
