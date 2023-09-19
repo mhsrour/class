@@ -1,15 +1,54 @@
 Answers:
-DNS, Domain name system, it translates domain names into IP addresses to be able to use internet resources, it eliminate the need for humans to memorize IP addresses
-HTTP, hypertext transfer protocol, it's the protocol that enables communication on the web,it works as a request-response btween a client and server.
-HTTP proxy, it's an intermediary btween a client and the internet, it serve various purposes such as improving performance by cashing,anonymizing the client or bypassing restrictions to certain web content.
-HTTPS, hypertext transfer protocol secure, it is an extension of HTTP that add a layer of security to the data transfer process.
-SMTP, simple mail transfer protocol, it's the standard protocol to send emails across the internet
-in Linux, the file system is hierarchical structure, at the top is root directory denoted by / and underneath it several subdirectories like:
-/bin: contains binary executables the are essential for the system to run
-/etc: holds system configuration files
-/home: home directories of all users
-/var: variable data like system logging files,mail and printer spool directories, transient and temporary files.
-/usr: read-only user data, contains the majority of multi user utilities and application
-/dev: device files,special files that correspond to the hardware device such as(keyboard,mouse ...)
-/sbin: holds adminstrative binaries and tools
-/lib: library files that contains code that myltiple programs can us simyltaneously
+1. DNS, Domain name system, it translates domain names into IP addresses to be able to use internet resources, it eliminate the need for humans to memorize IP addresses
+
+2. HTTP, hypertext transfer protocol, it's the protocol that enables communication on the web,it works as a request-response btween a client and server.
+
+3. HTTP PROXY, work as an intermediary btween the client and the internet,it takes request from the client, send them to the intended servers, recieve response from the servers,and send the recieved data back to the client, this process 
+            serve various purposes, such as improving performance by cashing,hide the client identity, bypassing restrictions to certain web content.
+
+4. HTTPS, hypertext transfer protocol secure, it is an extension of HTTP that add a layer of security to the data transfer process.
+
+5. SMTP, simple mail transfer protocol, it's the standard protocol to send emails across the internet
+
+6. in Linux, the file system is hierarchical structure, at the top is root directory denoted by / and underneath it several subdirectories like:
+ /bin: contains binary executables that are essential for the system to run
+ /etc: holds system configuration files
+ /home: home directories of all users
+ /var: variable data like system logging files,mail and printer spool directories, transient and temporary files.
+ /usr: read-only user data, contains the majority of multi user utilities and application
+ /dev: device files,special files that correspond to the hardware device such as(keyboard,mouse ...)
+ /sbin: holds adminstrative binaries and tools
+ /lib: library files that contains code that myltiple programs can us simyltaneously
+
+7. SSH Keys, the public key should be shared with the system that must authenticate the user,when a client connect to ssh server, the server encrypts a random number using the stored public key, the client use the private key to decrypt
+            it and send the data back and that will prove that he have the private key.
+
+8. Name and UID of administrator user, the administrator user is the root and have a UID(user identifier) of 0.
+
+9. list all files, ls -a.
+
+10. remove directory, rm -r.
+
+11. free used memmory, free command ,free memory does exist in linux.
+
+12. search for a string, use grep.
+
+13. connect threw ssh, ssh username@host( name or IP address or even website)
+
+14. all environment variables, use printenv command, envireonment vairiable are used to pass information into processes, like where the process is running.
+
+15. TAB-TAB, trigger the shell's auto-complete feature.
+
+16. available disk, df -h command.
+
+17. to check DNS, nslookup.
+
+18. file ownership and permissions, chown for file ownership and chmod for file permissions.
+
+19. chmod+x, it will add execute permission to the user,group and others for the specified file.
+
+20. permission 0750 means on a file***, read-write-execute for owner, read-exucte for group, nothing for others.
+
+21. permission 0750 means on a directory***, the owner can read-write and enter the directory, user from group can read enter the directory, others can't do read-write or even enter the directory.
+
+22. 
