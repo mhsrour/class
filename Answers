@@ -235,5 +235,7 @@ Answers:
 
 91. Mkdir, touch, chmod, chown, systemctl stop ( desert question)
 
-92. we use shutdown -r 
+92. Fifteen years from now, a bug known as “the year 2038 problem” (also known as Y2038, Y2K38, or the Epochalypse) is expected to cause issues in representing time for certain computer systems
+
+93. we use shutdown -r 
 
