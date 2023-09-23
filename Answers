@@ -49,6 +49,17 @@ Answers:
 
 20. permission 0750 means on a file***, read-write-execute for owner, read-exucte for group, nothing for others.
 
-21. permission 0750 means on a directory***, the owner can read-write and enter the directory, user from group can read enter the directory, others can't do read-write or even enter the directory.
+21. permission 0750 means on a directory***, the owner can read-write and enter the directory, user from group can read-enter the directory, others can't do read-write or even enter the directory.
 
-22. 
+22. ports: SSH     22
+           HTTP    80
+           HTTPS   443
+           SMTP    25
+           FTP     21
+           NTP     123
+           DNS     53
+  all ports are listed in : /etc/services
+
+23. if u can't ssh remotly to operation system, you connect threw hardware, that means you go and open your virtual box and start troubleshooting the issue.
+
+24.  
