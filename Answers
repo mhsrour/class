@@ -5,12 +5,15 @@ Answers:
 
 3. HTTP PROXY, work as an intermediary btween the client and the internet,it takes request from the client, send them to the intended servers, recieve response from the servers,and send the recieved data back to the client, this process 
             serve various purposes, such as improving performance by cashing,hide the client identity, bypassing restrictions to certain web content.
+   HTTP PROXY, examines and filter the web traffic before it transmits it back to the client as a way of blocking potentially any potential attacks from the web.
 
 4. HTTPS, hypertext transfer protocol secure, it is an extension of HTTP that add a layer of security to the data transfer process.
 
 5. SMTP, simple mail transfer protocol, it's the standard protocol to send emails across the internet
+         the sender send an email to the client, the mail client send's the email to the SMTP servers, if everything is in order,it accept the email and the recipient will be able to view it.
 
-6. in Linux, the file system is hierarchical structure, at the top is root directory denoted by / and underneath it several subdirectories like:
+6. Series of directories for different functions while organizing, managing, and executing files/scripts.
+  in Linux, the file system is hierarchical structure, at the top is root directory denoted by / and underneath it several subdirectories like:
  /bin: contains binary executables that are essential for the system to run
  /etc: holds system configuration files
  /home: home directories of all users
@@ -22,6 +25,7 @@ Answers:
 
 7. SSH Keys, the public key should be shared with the system that must authenticate the user,when a client connect to ssh server, the server encrypts a random number using the stored public key, the client use the private key to decrypt
             it and send the data back and that will prove that he have the private key.
+   Your public key can be shared with others. The private keys stays on your machine only.
 
 8. Name and UID of administrator user, the administrator user is the root and have a UID(user identifier) of 0.
 
@@ -31,11 +35,11 @@ Answers:
 
 11. free used memmory, free command ,free memory does exist in linux.
 
-12. search for a string, use grep.
+12. search for a string, use grep -option "my kongfu is the best" /path/to/directory
 
-13. connect threw ssh, ssh username@host( name or IP address or even website)
+13. connect threw ssh, ssh username@host( IP address or even website), ssh is a secure shell that is used to connect btween a client and a server.
 
-14. all environment variables, use printenv command, envireonment vairiable are used to pass information into processes, like where the process is running.
+14. all environment variables, use printenv command, envireonment vairiable are used to pass information into processes, like where the process is running. **
 
 15. TAB-TAB, trigger the shell's auto-complete feature.
 
@@ -62,13 +66,13 @@ Answers:
 
 23. if u can't ssh remotly to operation system, you connect threw hardware, that means you go and open your virtual box and start troubleshooting the issue.
 
-24. to add a user, use command adduser
+24. to add a user, use command adduser or useradd
 
-25. to add/remove a group, use usermod -a -G groupname username (that's how u add a group), gpasswd -d username groupname (delet a group from a user).
+25. to add/remove a group, use usermod -a -G groupname username (that's how u add a group), gpasswd -d username groupname (delet a group from a user) -d= remove the user from the group.
 
-26. what is bash alias, bash alias command is used for a longer command sequence, like if u don't wanna keep typing shh username@hostname ... u can put that in .bashrc file. and name it as u want.
+26. what is bash alias,shortcut for a longer command, bash alias command is used for a longer command sequence, like if u don't wanna keep typing shh username@hostname ... u can put that in .bashrc file. and name it as u want.
 
-27. how u set mail addreses of the root, u can set the mail in /etc/aliases and then u run the command newaliases to update the change
+27. how u set mail addreses of the root,  Usermod -c emailaddress username. how do we know it worked ask ayman 
 
 28. what CTRL-c do, it stops the execution of the current command.
 
@@ -76,17 +80,20 @@ Answers:
 
 30. what CTRL-z do, it suspend the execution , u can manipulate the job by using bg to let it continue in the background or fg to let it continue in foreground.
 
-31. /etc/services, it contain all ports.
+31. /etc/services, it contain all ports. it translate human readable service names into port nbs.
 
-32. difference btween UNIX and LINUX, the diffrence is the lisence(linux is a free operation system) and there's some specific tools and interfaces.
+32. difference btween UNIX and LINUX, the diffrence is the lisence(linux is an open source) and there's some specific tools and interfaces.
 
 33. difference btween SSH and TELNET, ssh uses encrytion so the data is secure, but telnet transmit data in plaintext so there's a security risk.
 
 34. 3 load averages, top or uptime command show the load average for the last one,five or fifteen minutes, it indicates the average number of processes that are either in a runnable or uniterruptable state.
+    a. Wa (wait time) – percentage of time CPU is writing and reading to/from disk
+    b. Id (idle time) – percentage of time CPU is not executing processes and available for other tasks
+    c. Sy (system time) – percentage of time CPU used to execute process/task
 
-35. lower case not valid in GNU ls, 'q' is the lowercase that it's nota valid option in GNU ls, but it's always better to check the man page(man ls) to be more accurate.
+35. lower case not valid in GNU ls, 'q' is the lowercase that it's nota valid option in GNU ls, but it's always better to check the man page(man ls) to be more accurate.***
 
-36. what is linux kernel module, linux kernel module is a code sent by the kernel upon deman, it can etend the kernel without the need to reboot the system, examples for kernel modules inlcude device drivers.
+36. what is linux kernel module, linux kernel module is a code sent by the kernel upon deman, it can extend the kernel without the need to reboot the system.
 
 37. steps for booting single user mode: 
    
@@ -106,7 +113,127 @@ Answers:
    3. passwd root
    4. touch /.autorelable
 
-38. 
+38.RAID storage configuration 
+(redundant array of independent disks) is a way of storing the same data in different places on multiple hard disks or solid-state drives (SSDs) to protect data in the case of a drive failure. 
 
     
+39. command not found, the command is not installed.
+
+40. to redirect STDOUT we use 1> or > (1 is silent)
+    to redirect STDERR we use 2> (let's say we wanna redirect errors from ls we do ls 2> file)
+    to do both we use &>
+
+41. 404 correlates with Https status- you can check to see if Https is enabled- needs to be restarted- check if its a physical connection meaning service provider issue. 404 page are referred to a dead r broken link. Reload file,check 
+    URl.
+
+42. Internet control message protocol – used to diagnose and manage network.
+
+43. what does "&", put the command in the background.
+
+44. what does "&disown", run in the background and stay even if the shell is terminated.
+
+45. packet filter ??
+
+46. Virtual memory is remote memory supplementary to systems RAM
+
+47. Swap memory/RAM used as extension to the hard drive when memory is full
+
+48. A record, NS record,... ***
+
+49. RRs? **
+
+50. split-horizon DNS.**
+
+51. sticky bit, allow the onwer of the directory or the root to delet or rename the file
+
+52. immutable bit, cannot be modified,deleted or renamed.
+
+53. symbolic link is just getting a pointer to a file.
+    hard link create an exacte copy of a file with the same inode nb.
+
+54. Inode store all the information associated with a file except the file name and the actual data. All files in any Linux directory have a filename and an inode number.
+    it contains device ID, group ID, user ID, file permissions …
+
+55. how to force/trigger a file system check on next reboot linux?? ***
+ 
+56. what is SNMP ?***
+
+57. Runlevel is the current state of the operating system, it defines what system services are operating. Runlevels are numbered from 0 to 6.
+    Who -r is the command to find which runlevel your on
+
+58. ssh port, allows you to forward network connection threw ssh connection.
+
+59. Local port forwarding allows you to securely access a sevice running on a remote server from local computer.
+    Remote port forwarding allows you to display a service running on local computer to the remote server
+
+60. edit /etc/passwd , then /etc/group and then create a home directory for the user, and then u set the user passwd by using passwd command.
+
+61. major and minors? ***
+
+62. the mknod allows you to create device files, u use it when you're interfacing with hardware devices
+
+63. 1. You may be out of i-nodes
+    2. There may be files hidden by mountpoints.
+    3. There may be space taken up by files that have been deleted but are still open.
+
+64. Insufficient available INODES, excess cache memory, or reserved space for root user
+
+65. Excess cache memory & filesystem journaling
+
+66. Ps displays the current process(es) actively running in the system
+
+67. Child process becomes a Zombie which system memory would be consumed without any benefit
+
+68. Ready state-process is ready and waiting for execution
+    Blocked state- process doesn’t execute unless a process event occurs
+    Running state- process is currently executing
+
+69. Netstat …. | grep :(port number)
+
+70. Bash script | tee filename
+
+71. Echo “1” activates IP forwarding when forwarded to the file that controls IP forwarding
+
+72. cetificate the site ?***
+
+73. yes, you can 
+
+74. A wild card certificate is used to secure multiple domains(hosts).
+
+75. files type, sockets, regular file, directories, symbolic link.
+
+76. process contain multiple threads,a process has it's own memory and thread is a lightweight process, after we fork a system the child process is duplicated but has a new process ID
+
+77. exec replace the process with a new one, fork create new process by duplicating the existing process.
+
+78. nohup ?? **
+
+79. myvar=hello
+    export myvar=hello ??***
+
+80. systemctl status httpd
+
+81. use rpm command to list the content.
+
+82. localhost is the name of the device we are using, ping localhost fails if the interface is down or network configuration issues.
+
+83. netstat command show all open ports.
+
+84. no, cause 255 is the max nb of an octat can have 
+
+85. Virtual local area network – splitting physical network into multiple logical networks
+ 
+86. Transmission control protocol & user datagram protocol – TCP is connection oriented protocol. Establishing a connection before data transfer. UDP is connectionless protocol. Does not establish connection prior to data transfer so        it’s quicker, but not as reliable as T
+
+87. Default gateway is essentially a router routing traffic as an entry and exit point for data traffic between LAN and external networks
+
+88. ip route command is used to display the routing table 
+
+89. TCP connection is more reliable, establishes connection before sending data, congestion and flow control
+
+90. the source port is 8080 to web source and destination, you connect threw http port =80 or you connect threw https port =443
+
+91. Mkdir, touch, chmod, chown, systemctl stop ( desert question)
+
+92. 
 
