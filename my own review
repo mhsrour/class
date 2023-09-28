@@ -1,1 +1,60 @@
+cp file1 /path/to/a/directory /file 4 ( this will copy file 1 into specific directory and rename it to file 4)
 
+echo $(date + %...) : print the value the command 
+
+chmod: to change permission
+(-):type (---):user permission (---):group permission  (---):everyone else { - --- --- ---}
+
+ps -ef : show all processes that are running 
+
+/etc/passwd: contain all users.
+/etc/group: contain all groups.
+/etc/shadow: contain all passwords.
+
+chown: change the ownership
+
+chgrp: change the group owner only
+
+userdel, useradd, groupadd, groupde, usermod,groupmod : I need to work on this more
+
+to do static ip address: vi /etc/sysconfig/network-scripts/ifcfg.enp0s3 ( your interface name)
+
+dhcp: assign ip addresses and other configuration to devices when they connect to a network
+
+DNS: domain name system, it translate domain names into ip addresses, it illiminate the need for humans to memorize IP addresses.
+
+IPAM: internal protocol address management, it's a data base system for tracking,planning and managing IP addresses.
+
+NFS:
+
+     1. yum install nfs-utils (install all utilitis for nfs)
+
+     2. systemctl restart nfs-server
+
+     3. showmount -e  IPADDRESS (192.168.0.17 in my case)
+
+     4. systemctl start rpcbind
+  
+     5. install the necessary packagies/utilies ( like 1.)
+
+     6. create the directory that we want to share: mkdir /home/mhsrour/nfs-share
+
+     7. export this directorie to be shared: vi /etc/export ( /home/mhsrour/192.168.0.17 (rw,sync,no-root-sync))
+
+     8. make sure rpc bind is running: systemctl status rpc.bind
+
+     9. if rpc bind wasn't running: - systemctl start rpc.bind
+                                    - systemctl restart rpc.bind
+
+    10. ensure that the NFS ports are allowed: . firewall-cmd --permanent --add-service=nfs (allow nfs through firewall)   
+                                               .. firewall-cmd --add-service=mounted (allow mount through firewall)  
+                                               ... firewall-cmd --add-service=rpc.bind (allow rpc through firewall)
+                                               .... firewall-cmd --reload
+
+    11. ensure that the export list is active: showmount -e ipaddress (192.168.0.17)
+
+    12. to make it presistant: vi /etc/fstab
+
+Logical Volumes:
+
+    
