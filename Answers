@@ -14,15 +14,26 @@ Answers:
 
 6. Series of directories for different functions while organizing, managing, and executing files/scripts.
   in Linux, the file system is hierarchical structure, at the top is root directory denoted by / and underneath it several subdirectories like:
- /bin: contains binary executables that are essential for the system to run
- /etc: holds system configuration files
- /home: home directories of all users
- /var: variable data like system logging files,mail and printer spool directories, transient and temporary files.
- /usr: read-only user data, contains the majority of multi user utilities and application
- /dev: device files,special files that correspond to the hardware device such as(keyboard,mouse ...)
- /sbin: holds adminstrative binaries and tools
- /lib: library files that contains code that myltiple programs can us simyltaneously
-
+ /bin: contains binary executable for the system to run. (binary: a system where numbers and value are expressed 0 and 1)
+ /boot: files needed in order to start the boot process.
+ /dev: special device files, needed to give access to the hardware.
+ /etc: configuration files specific to this system.
+ /home: home directorie where regular user store there personal data and configuration file.
+ /lib: library files, have a code that multiple programs can use it simultaneously( at the same time).
+ /media: This directory contains subdirectories which are used as mount points for removeable media such as floppy disks, cdroms and zip disks.
+ /mnt: This is a generic mount point under which you mount your filesystems or devices. 
+ /opt: where u modify the behavoir of a command
+ /proc: includes a directory for each running process, including kernel processes
+ /root: home directory for the adminstartive superuser,root.
+ /run: Runtime data for processes started since the last boot. This includes process ID files and lock files.
+ /sbin: contains binary executables and command line tools that are specific for the root user.
+ /srv: contains site-specific data which is served by this system. This main purpose of specifying this is so that users may find the location of the data ...
+ /sys: contain information from devices connected to ur computer.
+ /tmp: temprory files,. Files which have not been accessed, changed, or modified for 10 days are deleted from this directory automatically. Another temporary directory exists, /var/tmp, in which files
+       that have not been accessed, changed, or modified in more than 30 days are deleted automatically.
+ /usr: installed software, shared libraries, include files, and static read-only program data
+ /var: Variable data specific to this system that should persist between boots.Files that dynamically change (databases,cache directories,log files,and website content)
+      
 7. SSH Keys, the public key should be shared with the system that must authenticate the user,when a client connect to ssh server, the server encrypts a random number using the stored public key, the client use the private key to decrypt
             it and send the data back and that will prove that he have the private key.
    Your public key can be shared with others. The private keys stays on your machine only.
@@ -70,9 +81,10 @@ Answers:
 
 25. to add/remove a group, use usermod -a -G groupname username (that's how u add a group), gpasswd -d username groupname (delet a group from a user) -d= remove the user from the group.
 
-26. what is bash alias,shortcut for a longer command, bash alias command is used for a longer command sequence, like if u don't wanna keep typing shh username@hostname ... u can put that in .bashrc file. and name it as u want.
+26. what is bash alias,shortcut for a longer command, bash alias command is used for a longer command sequence, like if u don't wanna keep typing shh username@hostname ... u can put that in .bashrc file. 
+    and name it as u want.
 
-27. how u set mail addreses of the root,  Usermod -c emailaddress username. how do we know it worked ask ayman 
+27. how u set mail addreses of the root,  Usermod -c emailaddress username. how do we know it worked ask ayman ***
 
 28. what CTRL-c do, it stops the execution of the current command.
 
@@ -113,7 +125,7 @@ Answers:
    3. passwd root
    4. touch /.autorelable
 
-38.RAID storage configuration 
+38.RAID storage configuration ( another answer 94)
 (redundant array of independent disks) is a way of storing the same data in different places on multiple hard disks or solid-state drives (SSDs) to protect data in the case of a drive failure. 
 
     
@@ -123,8 +135,8 @@ Answers:
     to redirect STDERR we use 2> (let's say we wanna redirect errors from ls we do ls 2> file)
     to do both we use &>
 
-41. 404 correlates with Https status- you can check to see if Https is enabled- needs to be restarted- check if its a physical connection meaning service provider issue. 404 page are referred to a dead r broken link. Reload file,check 
-    URl.
+41. 404 correlates with Https status- you can check to see if Https is enabled- needs to be restarted- check if its a physical connection meaning service provider issue. 404 page are referred to a dead r broken link. 
+                                      Reload file,check URl.
 
 42. Internet control message protocol – used to diagnose and manage network.
 
@@ -238,4 +250,7 @@ Answers:
 92. Fifteen years from now, a bug known as “the year 2038 problem” (also known as Y2038, Y2K38, or the Epochalypse) is expected to cause issues in representing time for certain computer systems
 
 93. we use shutdown -r 
-
+94. RAID, redundant array of independent disk, it's a method of saving the same data into different places on multiple hard disks.
+    RAID0, split the data in 2 or more hard disk, it improve the system performance but it dosen't provide data protection.
+    RAID1, it's mirroring, it split the same data into 2 or more hard disk, it provide a high data protection and a decent read speed improvement, but it sacrifice storage capacity.
+    
