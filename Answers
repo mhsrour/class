@@ -138,7 +138,7 @@ Answers:
 41. 404 correlates with Https status- you can check to see if Https is enabled- needs to be restarted- check if its a physical connection meaning service provider issue. 404 page are referred to a dead r broken link. 
                                       Reload file,check URl.
 
-42. Internet control message protocol – used to diagnose and manage network.
+42. what is ICMP, Internet control message protocol – used to diagnose and manage network.
 
 43. what does "&", put the command in the background.
 
@@ -148,7 +148,7 @@ Answers:
 
 46. Virtual memory is remote memory supplementary to systems RAM
 
-47. Swap memory/RAM used as extension to the hard drive when memory is full
+47. Swap is a special type of space used as extension to the hard drive when memory is full.
 
 48. A record, NS record,... ***
 
@@ -156,12 +156,12 @@ Answers:
 
 50. split-horizon DNS.**
 
-51. sticky bit, allow the onwer of the directory or the root to delet or rename the file
+51. sticky bit, allow the onwer of the directory or the root to delet or rename the file.
 
 52. immutable bit, cannot be modified,deleted or renamed.
 
-53. symbolic link is just getting a pointer to a file.
-    hard link create an exacte copy of a file with the same inode nb.
+53. symbolic link is just getting a pointer to a file. deleting the original file will let the pointer point to a non-existing file, so it become broken.
+    hard link create an exacte copy of a file with the same inode nb,deleting the original don't affect anything.
 
 54. Inode store all the information associated with a file except the file name and the actual data. All files in any Linux directory have a filename and an inode number.
     it contains device ID, group ID, user ID, file permissions …
