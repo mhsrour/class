@@ -163,44 +163,54 @@ Answers:
 53. symbolic link is just getting a pointer to a file. deleting the original file will let the pointer point to a non-existing file, so it become broken.
     hard link create an exacte copy of a file with the same inode nb,deleting the original don't affect anything.
 
-54. Inode store all the information associated with a file except the file name and the actual data. All files in any Linux directory have a filename and an inode number.
-    it contains device ID, group ID, user ID, file permissions …
+54. inode is a data structure that stores meta data, except the file name and it's actual data.
+    inode contains, file size, device ID, user ID, file permission ...
 
 55. how to force/trigger a file system check on next reboot linux?? ***
  
 56. what is SNMP ?***
 
 57. Runlevel is the current state of the operating system, it defines what system services are operating. Runlevels are numbered from 0 to 6.
+    runlevel 0: halt or power off.
+    runlevel 1: single user mode (no networking)
+    runlevel 2: multi-user mode (no networking)
+    runlevel 3: multi-user mode (with networking)
+    runlevel 4: not used
+    runlevel 5: multi-user mode with networking and graphics
+    runlevel 6: reboot
     Who -r is the command to find which runlevel your on
 
 58. ssh port, allows you to forward network connection threw ssh connection.
 
-59. Local port forwarding allows you to securely access a sevice running on a remote server from local computer.
-    Remote port forwarding allows you to display a service running on local computer to the remote server
+59. Local port forwarding allows you to bypass firewall on certain web.
+    Remote port forwarding allows you to access local servers.
 
-60. edit /etc/passwd , then /etc/group and then create a home directory for the user, and then u set the user passwd by using passwd command.
+60. edit /etc/passwd,/etc/shadow,then /etc/group and then create a home directory for the user, and then u set the user passwd by using passwd command.
 
 61. major and minors? ***
 
-62. the mknod allows you to create device files, u use it when you're interfacing with hardware devices
+62. the mknod allows you to create device files, u use it when you're interfacing with hardware devices ***
 
-63. 1. You may be out of i-nodes
+63. file system is full error?
+    1. You may be out of i-nodes.
     2. There may be files hidden by mountpoints.
     3. There may be space taken up by files that have been deleted but are still open.
 
-64. Insufficient available INODES, excess cache memory, or reserved space for root user
+64. file is still held by the process,insufficient available INODES, excess cache memory, or reserved space for root user
 
 65. Excess cache memory & filesystem journaling
 
 66. Ps displays the current process(es) actively running in the system
 
 67. Child process becomes a Zombie which system memory would be consumed without any benefit
+    zombie process is a process that have exectued but still exist in the process table, and the cause is that his parent didn't read the exit statue of a child process.
 
-68. Ready state-process is ready and waiting for execution
-    Blocked state- process doesn’t execute unless a process event occurs
-    Running state- process is currently executing
+68. Ready state-process (is ready and waiting for execution)
+    stopped state- process (stopped by a signal)
+    Running state- process (is currently executing)
+    zombie state-process (this process is terminated but ifromation still exists in the process table)
 
-69. Netstat …. | grep :(port number)
+69. Netstat …. | grep :(port number) or use netstat -tuln 
 
 70. Bash script | tee filename
 
@@ -233,23 +243,27 @@ Answers:
 
 84. no, cause 255 is the max nb of an octat can have 
 
-85. Virtual local area network – splitting physical network into multiple logical networks
+85. Virtual local area network – splitting physical network into multiple logical networks **
  
-86. Transmission control protocol & user datagram protocol – TCP is connection oriented protocol. Establishing a connection before data transfer. UDP is connectionless protocol. Does not establish connection prior to data transfer so        it’s quicker, but not as reliable as T
+86. Transmission control protocol & user datagram protocol – TCP is connection-oriented protocol. make sure that all data arrive theire destination in order and without any error.
+    UDP(user datagram protocol) is connection-less protocol, it give up control in favor of low latency.
 
-87. Default gateway is essentially a router routing traffic as an entry and exit point for data traffic between LAN and external networks
+87. Default gateway is essentially a router routing traffic as an entry and exit point for data traffic between LAN and external networks.
+    default gateway is an access point that a device use to send information to another device threw networkor internet.
 
-88. ip route command is used to display the routing table 
+88. ip route or route -n command is used to display the routing table 
 
 89. TCP connection is more reliable, establishes connection before sending data, congestion and flow control
+    TCP is defined by 4 value: source IP address, source port number, destination IP address and destination port number.
 
-90. the source port is 8080 to web source and destination, you connect threw http port =80 or you connect threw https port =443
+90. the source port is 8080 or any other port to web source and destination, you connect threw http port =80 or you connect threw https port =443
 
-91. Mkdir, touch, chmod, chown, systemctl stop ( desert question)
+91. desert question: ssh, yum, vi, grep, cd.
 
 92. Fifteen years from now, a bug known as “the year 2038 problem” (also known as Y2038, Y2K38, or the Epochalypse) is expected to cause issues in representing time for certain computer systems
 
 93. we use shutdown -r 
+
 94. RAID, redundant array of independent disk, it's a method of saving the same data into different places on multiple hard disks.
     RAID0, split the data in 2 or more hard disk, it improve the system performance but it dosen't provide data protection.
     RAID1, it's mirroring, it split the same data into 2 or more hard disk, it provide a high data protection and a decent read speed improvement, but it sacrifice storage capacity.
