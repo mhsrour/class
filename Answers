@@ -156,7 +156,7 @@ Answers:
 
 50. split-horizon DNS.**
 
-51. sticky bit, allow the onwer of the directory or the root to delet or rename the file.
+51. sticky bit,.
 
 52. immutable bit, cannot be modified,deleted or renamed.
 
