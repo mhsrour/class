@@ -131,9 +131,7 @@ Answers:
     
 39. command not found, the command is not installed.
 
-40. to redirect STDOUT we use 1> or > (1 is silent)
-    to redirect STDERR we use 2> (let's say we wanna redirect errors from ls we do ls 2> file)
-    to do both we use &>
+40. zabeta
 
 41. 404 correlates with Https status- you can check to see if Https is enabled- needs to be restarted- check if its a physical connection meaning service provider issue. 404 page are referred to a dead r broken link. 
                                       Reload file,check URl.
