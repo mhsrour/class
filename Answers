@@ -148,11 +148,11 @@ Answers:
 
 47. Swap is a special type of space used as extension to the hard drive when memory is full.
 
-48. A record, NS record,... ***
+48. A record, NS record,... 
 
-49. RRs? **
+49. RRs? 
 
-50. split-horizon DNS.**
+50. split-horizon DNS.
 
 51. sticky bit,.
 
@@ -164,7 +164,7 @@ Answers:
 54. inode is a data structure that stores meta data, except the file name and it's actual data.
     inode contains, file size, device ID, user ID, file permission ...
 
-55. how to force/trigger a file system check on next reboot linux?? ***
+55. how to force/trigger a file system check on next reboot linux?? 
  
 56. what is SNMP ?***
 
@@ -185,7 +185,7 @@ Answers:
 
 60. edit /etc/passwd,/etc/shadow,then /etc/group and then create a home directory for the user, and then u set the user passwd by using passwd command.
 
-61. major and minors? ***
+61. major and minors? 
 
 62. the mknod allows you to create device files, u use it when you're interfacing with hardware devices ***
 
