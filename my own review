@@ -55,6 +55,43 @@ NFS:
 
     12. to make it presistant: vi /etc/fstab
 
-Logical Volumes:
+Set Up The Apache HTTP Server:
 
-    
+1.Update The Package Repository: sudo yum update -y
+                                 sudo yum install httpd -y
+
+2.Disable SELinux: sudo vi /etc/selinux/config (disable selinux--> SELINUX=disabled)
+
+3.Allow Apache Through The Firewall:  sudo firewall-cmd --permanent --add-port=80/tcp
+                                      sudo firewall-cmd --permanent --add-port=443/tcp
+                                      sudo firewall-cmd --reload
+
+4.Create A Test Page: sudo vi /var/www/html/index.html
+<!DOCTYPE html>
+<html> 
+
+<head>
+
+<title> YOURNAME's Server </title>
+
+</head>
+
+<body>
+
+<h1>tittle </h1>
+<p>PUT THE ANSWERS TO QUESTIONS  here. </p>
+<p>PUT THE ANSWERS TO QUESTIONS  here. </p>
+
+<p>PUT THE ANSWERS TO QUESTIONS  here. </p>
+
+</body>
+</html>
+
+5.Restart the Apache service to reflect the changes: sudo systemctl start httpd
+
+6.Enable Apache: sudo systemctl enable httpd
+
+7.Test The Apache HTTP Server
+
+To verify that the Apache web server is up and running, open your web browser and go to your server's IP Address with the url http://your.server.ip.address.
+
