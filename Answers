@@ -34,8 +34,8 @@ Answers:
  /usr: installed software, shared libraries, include files, and static read-only program data
  /var: Variable data specific to this system that should persist between boots.Files that dynamically change (databases,cache directories,log files,and website content)
       
-7. SSH Keys, the public key should be shared with the system that must authenticate the user,when a client connect to ssh server, the server encrypts a random number using the stored public key, the client use the private key to decrypt
-            it and send the data back and that will prove that he have the private key.
+7. SSH Keys, the public key should be shared with the system that must authenticate the user,when a client connect to ssh server, the server encrypts a random number using the stored public key,
+the client use the private key to decrypt it and send the data back and that will prove that he have the private key.
    Your public key can be shared with others. The private keys stays on your machine only.
 
 8. Name and UID of administrator user, the administrator user is the root and have a UID(user identifier) of 0.
